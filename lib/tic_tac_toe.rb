@@ -42,11 +42,15 @@ def valid_move?(board, index)
 end
 
 def turn_count(board)
-  board.select |index|
+  board.select |index| do
+    index != " " || index != nil
+  end.count
+end
 
 def turn(board)
   puts "Pick a position from 1-9"
   input = gets.strip
   index = input_to_index(input)
   board
+end
   
