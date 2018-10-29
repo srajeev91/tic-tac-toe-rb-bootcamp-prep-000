@@ -96,6 +96,7 @@ def over?(board)
 end
 
 def winner(board)
+  combo = ""
   if won?(board)
     board[combo[0]]
   end
