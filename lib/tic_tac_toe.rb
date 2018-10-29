@@ -51,6 +51,16 @@ def turn(board)
   puts "Pick a position from 1-9"
   input = gets.strip
   index = input_to_index(input)
-  board
+  if valid_move?(board, index)
+    if turn_count(board) % 2 == 0
+      char = "X"
+    else
+      char = "O"
+    end
+    
+    move(board, index, char)
+  else
+    turn(board)
+  end
 end
   
