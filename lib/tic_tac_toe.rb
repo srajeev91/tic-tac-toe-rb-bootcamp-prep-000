@@ -25,8 +25,8 @@ def move(board, index, char)
   board[index] = char
 end
 
-def position_taken?(board, index)
-  if board[index] = " " || board[index] == nil
+def position_taken?(board, pos)
+  if board[input_to_index(pos)] = " " || board[input_to_index(pos)] == nil
     false
   else
     true
