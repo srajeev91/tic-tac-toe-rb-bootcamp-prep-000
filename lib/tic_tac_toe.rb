@@ -70,8 +70,7 @@ end
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
     if board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]] && board[combo[0]] != nil && board[combo[0]] != " "
-      combo = combo
-      return true
+      return combo
     end
   end
   false
@@ -96,9 +95,8 @@ def over?(board)
 end
 
 def winner(board)
-  combo = ""
   if won?(board)
-    board[combo[0]]
+    board[won?(board)[0]]
   end
 end
   
