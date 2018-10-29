@@ -81,4 +81,8 @@ def full?(board)
     element != " " && element != nil
   end
 end
+
+def draw?(board)
+  !won(board) && full(board)
+end
   
