@@ -42,7 +42,7 @@ def valid_move?(board, index)
 end
 
 def turn_count(board)
-  board.
+  board.select |index|
 
 def turn(board)
   puts "Pick a position from 1-9"
