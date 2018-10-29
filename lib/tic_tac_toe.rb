@@ -85,4 +85,12 @@ end
 def draw?(board)
   !won?(board) && full?(board)
 end
+
+def over?(board)
+  if draw?(board) || won?(board)
+    true
+  else
+    false
+  end
+end
   
