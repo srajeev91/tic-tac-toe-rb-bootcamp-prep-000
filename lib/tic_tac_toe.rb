@@ -99,4 +99,14 @@ def winner(board)
     board[won?(board)[0]]
   end
 end
+
+def play(board)
+  turn(board) until over?(board)
+  
+  if won?(board)
+    "Congratulations!"
+  else
+    "It was a draw"
+  end
+end
   
