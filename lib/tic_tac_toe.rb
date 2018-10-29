@@ -43,7 +43,7 @@ end
 
 def turn_count(board)
   board.select do |index|
-    index != " " || index != nil
+    index != " " && index != nil
   end.count
 end
 
