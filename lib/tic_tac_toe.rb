@@ -42,9 +42,9 @@ def valid_move?(board, index)
 end
 
 def turn_count(board)
-  board.count |index| do
-    if index != " " || index != nil
-  end
+  board.select do |index|
+    index != " " || index != nil
+  end.count
 end
 
 def turn(board)
