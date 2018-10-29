@@ -52,15 +52,19 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    if turn_count(board) % 2 == 0
-      char = "X"
-    else
-      char = "O"
-    end
-    
+    char = current_player(board)
     move(board, index, char)
   else
     turn(board)
   end
 end
+
+def current_player(board)
+  if turn_count(board) % 2 == 0
+    "X"
+  else
+    "O"
+  end
+end
+  
   
