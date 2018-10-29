@@ -68,7 +68,7 @@ def current_player(board)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
+  WIN_COMBINATIONS.each do |combo|
     if combo[0] == combo[1] && combo[1] == combo[2]
       return true
     end
