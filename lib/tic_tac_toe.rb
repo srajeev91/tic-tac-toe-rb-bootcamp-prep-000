@@ -104,9 +104,9 @@ def play(board)
   turn(board) until over?(board)
   
   if won?(board)
-    "Congratulations #{current_player(board)}!"
+    puts "Congratulations #{current_player(board)}!"
   else
-    "Cat's Game!"
+    puts "Cat's Game!"
   end
 end
   
