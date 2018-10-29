@@ -34,9 +34,19 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if (0..8).include?(index) && !position_taken(board, index)
+  if (0..8).include?(index) && !position_taken?(board, index)
     true
   else
     false
   end
 end
+
+def turn_count(board)
+  
+
+def turn(board)
+  puts "Pick a position from 1-9"
+  input = gets.strip
+  index = input_to_index(input)
+  board
+  
