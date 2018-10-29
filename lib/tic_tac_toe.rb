@@ -34,7 +34,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if (0..8).includes?(index) && !position_taken(board, index)
+  if (0..8).include?(index) && !position_taken(board, index)
     true
   else
     false
